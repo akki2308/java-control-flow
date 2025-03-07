@@ -1,16 +1,20 @@
 import java.util.Scanner;
 
-public class DivisibilityCheck {
+public class DivisibleByFive {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
+        // Taking input
         System.out.print("Enter a number: ");
-        int number = scanner.nextInt();
+        int num = sc.nextInt();
 
-        scanner.close();
+        // Check divisibility by 5
+        if (num % 5 == 0) {
+            System.out.println(num + " is divisible by 5.");
+        } else {
+            System.out.println(num + " is not divisible by 5.");
+        }
 
-        boolean isDivisible = (number % 5 == 0);
-
-        System.out.printf("Is the number %d divisible by 5? %b%n", number, isDivisible);
+        sc.close();
     }
 }
